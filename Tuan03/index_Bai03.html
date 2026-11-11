@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #343a46;
+            background: white;
+        }
+
+        .container {
+            width: 100%;
+            display: grid;
+            grid-template-areas:
+                "menu"
+                "hang2"
+                "hang3"
+                "hang4"
+                "hang5"
+                "hang6";
+        }
+
+        /* ================= HEADER ================= */
+
+        .container div.menu {
+            grid-area: menu;
+        }
+
+        #container_menu {
+            width: 82%;
+            height: 70px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        #container_menu ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li.menu {
+            display: inline-block;
+            margin-right: 25px;
+            list-style: none;
+            font-size: 14px;
+            color: #4f5662;
+        }
+
+        #logo {
+            width: 105px;
+            height: auto;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .search-box {
+            width: 155px;
+            height: 36px;
+            border: 1px solid #d5d9de;
+            border-radius: 4px;
+            padding: 0 10px;
+            font-size: 13px;
+            outline: none;
+        }
+
+        .search-box::placeholder {
+            color: #b5bbc2;
+        }
+
+        .cart {
+            font-size: 14px;
+            white-space: nowrap;
+            color: #343a46;
+        }
+
+        .avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+        }
+
+        /* ================= TITLE ================= */
+
+        .container div.hang2 {
+            grid-area: hang2;
+        }
+
+        #so2 {
+            width: 82%;
+            margin: 45px auto 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #so2 h1 {
+            margin: 0;
+            font-size: 42px;
+            font-weight: 700;
+            color: #303641;
+        }
+
+        /* ================= PROMOTION 1 ================= */
+
+        .container div.hang3 {
+            grid-area: hang3;
+        }
+
+        #so3 {
+            width: 82%;
+            height: 235px;
+            margin: 0 auto 36px;
+            display: flex;
+            border: 1px solid #dfe2e6;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        #so3 #left {
+            width: 48%;
+            display: flex;
+        }
+
+        #so3 #left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #so3 #right {
+            width: 52%;
+            padding: 22px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* ================= PROMOTION 2 ================= */
+
+        .container div.hang4 {
+            grid-area: hang4;
+        }
+
+        #so4 {
+            width: 82%;
+            height: 235px;
+            margin: 0 auto 36px;
+            display: flex;
+            border: 1px solid #dfe2e6;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        #so4 #right {
+            width: 52%;
+            padding: 22px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #so4 #left {
+            width: 48%;
+            display: flex;
+        }
+
+        #so4 #left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ================= TEXT ================= */
+
+        h4 {
+            margin: 0 0 12px;
+            font-size: 26px;
+            color: #343a46;
+        }
+
+        h5 {
+            margin: 0 0 7px;
+            font-size: 16px;
+            line-height: 1.45;
+            font-weight: 400;
+            color: #4f5662;
+        }
+
+        #so3 i,
+        #so4 em {
+            color: #8c939d;
+            font-size: 14px;
+        }
+
+        .shop-btn {
+            width: 153px;
+            height: 42px;
+            margin-top: 18px;
+            border: none;
+            border-radius: 3px;
+            background: #45a27d;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        /* ================= PROMOTION 3 ================= */
+
+        .container div.hang5 {
+            grid-area: hang5;
+        }
+
+        #so5 {
+            width: 82%;
+            height: 280px;
+            margin: 0 auto 50px;
+            border-radius: 7px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #so5 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #so5-content {
+            position: absolute;
+            top: 50%;
+            right: 7%;
+            transform: translateY(-50%);
+            width: 43%;
+        }
+
+        #so5 h2 {
+            margin: 0 0 10px;
+            font-size: 38px;
+            color: #303641;
+        }
+
+        #so5 p {
+            margin: 0;
+            width: 85%;
+            font-size: 16px;
+            line-height: 1.45;
+            color: #4f5662;
+        }
+
+        /* ================= FOOTER ================= */
+
+        .container div.hang6 {
+            grid-area: hang6;
+        }
+
+        #footer {
+            min-height: 315px;
+            padding: 70px 9% 30px;
+            background: #1e232b;
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.7fr 2.4fr;
+            gap: 40px;
+        }
+
+        #footer h3 {
+            margin: 0 0 17px;
+            font-size: 18px;
+        }
+
+        #footer p,
+        #footer li {
+            margin: 0 0 13px;
+            font-size: 13px;
+            color: #e1e4e8;
+        }
+
+        #footer ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .language {
+            width: 100px;
+            height: 30px;
+            margin-top: 10px;
+            background: transparent;
+            border: 1px solid #d9dde2;
+            border-radius: 3px;
+            color: white;
+            padding: 0 8px;
+        }
+
+        .subscribe-text {
+            margin-bottom: 9px !important;
+        }
+
+        .subscribe {
+            width: 100%;
+            max-width: 330px;
+            height: 40px;
+            display: flex;
+        }
+
+        .subscribe input {
+            flex: 1;
+            border: 1px solid #89919b;
+            background: transparent;
+            color: white;
+            padding: 0 12px;
+            outline: none;
+        }
+
+        .subscribe button {
+            width: 95px;
+            border: none;
+            background: #45a27d;
+            color: white;
+            font-size: 14px;
+        }
+
+        .social {
+            margin-top: 22px;
+            font-size: 18px;
+            letter-spacing: 8px;
+        }
+
+        .copyright {
+            margin-top: 25px !important;
+            text-align: right;
+            color: #d0d4d9 !important;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+            #container_menu,
+            #so2,
+            #so3,
+            #so4,
+            #so5 {
+                width: 92%;
+            }
+
+            #footer {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+            #container_menu {
+                height: auto;
+                padding: 15px 0;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            #container_menu > div:first-child {
+                order: 2;
+            }
+
+            #container_menu > div:nth-child(2) {
+                order: 1;
+                width: 100%;
+                text-align: center;
+            }
+
+            #container_menu > div:last-child {
+                order: 3;
+            }
+
+            #so3,
+            #so4 {
+                height: auto;
+                flex-direction: column;
+            }
+
+            #so3 #left,
+            #so3 #right,
+            #so4 #left,
+            #so4 #right {
+                width: 100%;
+            }
+
+            #so3 #left,
+            #so4 #left {
+                height: 220px;
+            }
+
+            #so3 #right,
+            #so4 #right {
+                padding: 25px;
+            }
+
+            #so4 #left {
+                order: -1;
+            }
+
+            #so5 {
+                height: 430px;
+            }
+
+            #so5-content {
+                top: auto;
+                bottom: 30px;
+                right: 7%;
+                transform: none;
+                width: 86%;
+            }
+
+            #so5 h2 {
+                font-size: 30px;
+            }
+
+            #footer {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= HEADER ================= -->
+        <div id="container_menu" class="menu">
+
+            <div>
+                <ul>
+                    <li class="menu">Shop</li>
+                    <li class="menu">Offers</li>
+                    <li class="menu">Our story</li>
+                    <li class="menu">Blog</li>
+                </ul>
+            </div>
+
+            <div>
+                <img id="logo"
+                     src="./images/Image 1.png"
+                     alt="Logo">
+            </div>
+
+            <div class="header-right">
+                <input class="search-box"
+                       type="text"
+                       placeholder="⌕  Search product...">
+
+                <span class="cart">🛒 Cart (0)</span>
+
+                <img class="avatar"
+                     src="./images/Avatar 1.png"
+                     alt="Avatar">
+            </div>
+
+        </div>
+
+        <!-- ================= TITLE ================= -->
+        <div id="so2" class="hang2">
+            <h1>Promotions</h1>
+        </div>
+
+        <!-- ================= PROMOTION 1 ================= -->
+        <div id="so3" class="hang3">
+
+            <div id="left">
+                <img src="./images/Image 1 (1).png"
+                     alt="Promotion image">
+            </div>
+
+            <div id="right">
+                <h4>Promotion title</h4>
+
+                <h5>
+                    Et ipsum irure amet cupidatat mollit exercitation
+                    consequat duis aliquip. Reprehenderit Lorem veniam
+                    pariatur esse pariatur in aute tempor au
+                </h5>
+
+                <i>
+                    *Velit deserunt elit proident velit anim adipisicing
+                </i>
+
+                <button class="shop-btn">Shop now</button>
+            </div>
+
+        </div>
+
+        <!-- ================= PROMOTION 2 ================= -->
+        <div id="so4" class="hang4">
+
+            <div id="right">
+                <h4>Promotion title</h4>
+
+                <h5>
+                    Et ipsum irure amet cupidatat mollit exercitation
+                    consequat duis aliquip. Reprehenderit Lorem veniam
+                    pariatur esse pariatur in aute tempor au
+                </h5>
+
+                <em>
+                    *Velit deserunt elit proident velit anim adipisicing
+                </em>
+
+                <button class="shop-btn">Shop now</button>
+            </div>
+
+            <div id="left">
+                <img src="./images/Image 1 (2).png"
+                     alt="Promotion image">
+            </div>
+
+        </div>
+
+        <!-- ================= PROMOTION 3 ================= -->
+        <div id="so5" class="hang5">
+
+            <img src="./images/Image 1 (3).png"
+                 alt="Gift for your skin">
+
+            <div id="so5-content">
+                <h2>Gift for your skin</h2>
+
+                <p>
+                    Enim officia magna ut esse aliquip irure
+                    consectetur dolor dolor commodo et. Cupid
+                </p>
+
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+        </div>
+
+        <!-- ================= FOOTER ================= -->
+        <div id="footer" class="hang6">
+
+            <div>
+                <h3>About</h3>
+                <ul>
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Our story</li>
+                    <li>Blogs</li>
+                </ul>
+
+                <select class="language">
+                    <option>English</option>
+                </select>
+            </div>
+
+            <div>
+                <h3>Help</h3>
+                <ul>
+                    <li>Shipping & Returns</li>
+                    <li>Track Order</li>
+                    <li>FAQs</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>Phone:</p>
+                <p><b>(+1) 123 456 7893</b></p>
+                <p>Email:</p>
+                <p><b>name@email.com</b></p>
+            </div>
+
+            <div>
+                <h3>Receive new promotions</h3>
+                <p class="subscribe-text">
+                    Duis ea tempor commodo amet reprehende
+                </p>
+
+                <div class="subscribe">
+                    <input type="email" placeholder="✉  Input your email">
+                    <button>Subscribe</button>
+                </div>
+
+                <div class="social">
+                    🐦  ●  in  ▶
+                </div>
+
+                <p class="copyright">
+                    © 2022 Brand, Inc. &nbsp;•&nbsp; Privacy
+                    &nbsp;•&nbsp; Terms &nbsp;•&nbsp; Sitemap
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
