@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            display: grid;
+            grid-template-areas: "menu" "hang2" "hang3" "hang4" "hang5" "hang6";
+        }
+        
+        #menu {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #cuoi {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #giua {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        li {
+            display: inline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="menu" class="menu">
+            <div id="header" class="header">
+                <img src="./images/logo.png" alt="">
+                <img src="./images/searchengine.png" alt="">
+            </div>
+
+            <div id="giua" class="giua">
+                <ul>
+                    <li>Images</li>
+                    <li>Videos</li>
+                    <li>Shopping</li>
+                    <li>News</li>
+                </ul>
+            </div>
+
+            <div id="cuoi" class="cuoi">
+                <img src="./images/avatar 2.png" alt="">
+                <img src="./images/chevron down large 2.png" alt="">
+            </div>
+        </div>
+
+        <div id="search" class="search">
+            <img src="./images/Group 4.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
